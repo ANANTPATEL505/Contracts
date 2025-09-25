@@ -8,7 +8,7 @@ contract EventOrganization{
         address organizer;
         string name;
         uint date;
-        uint price;
+        uint price; //wei
         uint ticketSupply;
         uint ticketRemain;
     }
