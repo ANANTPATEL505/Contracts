@@ -31,7 +31,7 @@ contract EventOrganization{
         require(thisevent.date != 0, "Event does not exist");
         require(thisevent.date > block.timestamp, "Event has already ended");
         require(thisevent.ticketRemain >= quantity, "Not enough tickets left");
-        require(msg.value == thisevent.price * quantity, "Incorrect payment amount");
+        require(msg.value == thisevent.price * quantity, "Incorrect payment amount"); //wei
 
         thisevent.ticketRemain -= quantity;
         tickets[msg.sender][id] += quantity;
